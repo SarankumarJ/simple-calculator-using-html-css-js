@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    background-color: #1c1c1c;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.calculator-display {
+    grid-column: span 4;
+    background-color: #252525;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: white;
+    font-size: 2.5rem;
+    overflow: hidden;
+}
+
+.output {
+    width: 100%;
+    text-align: right;
+}
+
+.previous-operand {
+    font-size: 1.5rem;
+    opacity: 0.75;
+}
+
+.current-operand {
+    font-size: 2.5rem;
+}
+
+button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+button[data-operation] {
+    background-color: #ff9500;
+    color: white;
+}
+
+button[data-operation]:hover {
+    background-color: #ffab40;
+}
+
+button[data-equals] {
+    background-color: #ff2d55;
+    color: white;
+}
+
+button[data-equals]:hover {
+    background-color: #ff5a7a;
+}
+
+button[data-all-clear] {
+    background-color: #f44336;
+    color: white;
+}
+
+button[data-all-clear]:hover {
+    background-color: #f6655a;
+}
+
+button[data-delete] {
+    background-color: #ff3b30;
+    color: white;
+}
+
+button[data-delete]:hover {
+    background-color: #ff6b60;
+}
